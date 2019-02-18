@@ -8,6 +8,28 @@ module.exports = function(app) {
         res.json(friendData);
     });
 
+    // app.post("/api/friends", function (req, res) {
+
+    //     //This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
+    //     var thisUser = req.body;
+    //     var bestMatch = {};
+    //     var closestMatch = 100;
+    //     for (var i = 0; i < friendData.length; i++) {
+    //         var totalDifference = 0;
+    //         for (var j = 0; j < friendData[i].scores.length; j++) {
+    //             //compare the code of two arrays in position j
+    //             totalDifference += Math.abs(friendData[i].scores[j] - thisUser.scores[j])
+    //             // find the difference in their value
+    //         }
+    //         if (closestMatch > totalDifference) {
+    //             bestMatch = friendData[i];
+    //             closestMatch = totalDifference;
+    //         }
+    //     }
+    //     console.log(thisUser);
+    //     friendData.push(thisUser);
+    //     res.json(bestMatch);
+    // });
     // POST route for /api/friends takes in the new data and responds with the most compatible match.
     app.post('/api/friends', function(req, res) {
         // Our user is the data sent in the request.

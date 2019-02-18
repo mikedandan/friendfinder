@@ -1,7 +1,7 @@
 module.exports = [
     {
-        "name": "Joe Luck",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "name": "Deadpool",
+        "photo": "https://images-na.ssl-images-amazon.com/images/I/71prblSklaL._SX425_.jpg",
         "scores": [
             5,
             1,
@@ -13,6 +13,22 @@ module.exports = [
             5,
             4,
             1
+        ]
+    },
+    {
+        "name": "Deadpool2",
+        "photo": "https://images-na.ssl-images-amazon.com/images/I/71prblSklaL._SX425_.jpg",
+        "scores": [
+            5,
+            1,
+            3,
+            4,
+            5,
+            1,
+            2,
+            4,
+            4,
+            2
         ]
     }
 ]

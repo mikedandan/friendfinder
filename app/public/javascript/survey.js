@@ -1,5 +1,8 @@
-$(document).ready(function() {
-    $('select').formSelect();
+$(document).ready(function () {
+    // $('select').formSelect();
+
+    // $('.modal').modal();
+
     // Questions listed in an array so they can be procedurally generated.
     var questions = [
         'I am the life of the party.',
@@ -37,7 +40,7 @@ $(document).ready(function() {
         var dropDown = $('<div class="form-group">');
         var select = $('<select class="form-control selector">');
         // Create an option for each choice.
-        choices.forEach(function(choice) {
+        choices.forEach(function (choice) {
             var option = $('<option>').text(choice);
             select.append(option);
         });
@@ -50,21 +53,21 @@ $(document).ready(function() {
     });
 
     // Event handler for when the form is submitted.
-    $('#submit').on('click', function(event) {
+    $('#submit').on('click', function (event) {
 
         // Prevent reload.
         event.preventDefault();
 
         // Capture username and image link values.
         var userName = $('#userName').val();
-        var imageLink = $('#imageUrl').val();
+        var imageUrl = $('#imageUrl').val();
 
         // If both of those items were filled out, gather other answers and submit.
-        if (userName.length > 0 && imageLink.length >0) {
+        if (userName.length > 0 && imageUrl.length > 0) {
             var answers = [];
 
             // Add the response for each selector to the array of answers.
-            Object.keys($('.selector')).forEach(function(key) {
+            Object.keys($('.selector')).forEach(function (key) {
                 if (answers.length < questions.length) {
                     // Take only the first character of the answer, which is the number.
                     answers.push($('.selector')[key].value.charAt(0));
@@ -79,7 +82,7 @@ $(document).ready(function() {
             };
 
             // POST that data to /api/friends.
-            $.post('/api/friends', surveyData, function(data) {
+            $.post('/api/friends', surveyData, function (data) {
 
                 // Use data callback to display result.
                 if (data) {
@@ -90,7 +93,7 @@ $(document).ready(function() {
                     $('#imageUrl').val('');
 
                     // The results are in array form. For each object, grab the name and URL.
-                    data.forEach(function(profile) {
+                    data.forEach(function (profile) {
                         var profileDiv = $('<div class="profile">');
                         var name = profile.name;
                         var photoURL = profile.photo;
@@ -117,7 +120,7 @@ $(document).ready(function() {
                     $('#resultModal').modal();
                 }
             });
-        // If either name or URL is missing, show the error modal.
+            // If either name or URL is missing, show the error modal.
         } else {
             $('#errorModal').modal();
             // The error modal can be dismissed but it will also disappear after 2 seconds.
