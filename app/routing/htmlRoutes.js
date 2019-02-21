@@ -18,8 +18,8 @@ module.exports = function (app) {
         res.json(path.join(__dirname, "public/home.html"));
       });
       
-    // USE route returns home.html for any undefined GET routes.
-    app.use(function (req, res) {
-        res.sendFile(path.join(__dirname + '/../public/home.html'));
-    });
+    // // USE route returns home.html for any undefined GET routes.
+    // app.use(function (req, res) {
+    //     res.sendFile(path.join(__dirname + '/../public/home.html'));
+    // });
 };
