@@ -6,7 +6,9 @@ Getting Started
 To view the site and interact with other users' data, visit https://desolate-river-51282.herokuapp.com/
 
 Prerequisites
+
 Node.js/NPM
+
 Instructions
 To run the site locally and interact with only your own and the example data,
 
