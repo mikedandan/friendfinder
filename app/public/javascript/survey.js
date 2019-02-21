@@ -5,16 +5,16 @@ $(document).ready(function () {
 
     // Questions listed in an array so they can be procedurally generated.
     var questions = [
-        'I am the life of the party.',
-        'I am extraordinarily cynical.',
-        'I have a poor grip on reality.',
+        'I love fast cars.',
+        'I would like to be a superhero.',
+        'I would say I can do anything I put my mind to.',
         'I crave attention.',
-        'I would rather sleep in on my days off.',
+        'I would rather binge watch on my days off.',
         'I have a good relationship with my family.',
         'I believe that everything happens for a reason.',
         'I enjoy cooking for myself and others.',
-        'I am a pet person.',
-        'I believe in a higher power.'
+        'I am a people person.',
+        'I believe in a hard work.'
     ];
 
     // Choices for personality questions.
