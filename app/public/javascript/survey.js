@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     // $('.modal').modal();
 
-    // Questions listed in an array so they can be procedurally generated.
+    // Questions listed in an array so they can be generated.
     var questions = [
         'I love fast cars.',
         'I would like to be a superhero.',
@@ -17,7 +17,7 @@ $(document).ready(function () {
         'I believe in a hard work.'
     ];
 
-    // Choices for personality questions.
+    // Choices for survey questions.
     var choices = [
         '1 (Strongly Disagree)',
         '2 (Disagree)',
@@ -64,25 +64,25 @@ $(document).ready(function () {
 
         // If both of those items were filled out, gather other answers and submit.
         if (userName.length > 0 && imageUrl.length > 0) {
-            var answers = [];
+            var scores = [];
 
             // Add the response for each selector to the array of answers.
             Object.keys($('.selector')).forEach(function (key) {
-                if (answers.length < questions.length) {
+                if (scores.length < questions.length) {
                     // Take only the first character of the answer, which is the number.
-                    answers.push($('.selector')[key].value.charAt(0));
+                    scores.push($('.selector')[key].value.charAt(0));
                 }
             });
 
             // Put the data in object form.
-            var surveyData = {
+            var thisUser = {
                 name: userName,
                 photo: imageUrl,
-                answers: answers
+                scores: scores
             };
 
             // POST that data to /api/friends.
-            $.post('/api/friends', surveyData, function (data) {
+            $.post('/api/friends', thisUser, function (data) {
 
                 // Use data callback to display result.
                 if (data) {
@@ -124,9 +124,9 @@ $(document).ready(function () {
         } else {
             $('#errorModal').modal();
             // The error modal can be dismissed but it will also disappear after 2 seconds.
-            // setTimeout(function() {
-            //     $('#errorModal').modal('hide');
-            // }, 2000);
+            setTimeout(function() {
+                $('#errorModal').modal('hide');
+            }, 2000);
         }
     });
 });

@@ -1,10 +1,10 @@
 // Import friend data.
 var friendData = require('../data/friends.js');
 
-module.exports = function(app) {
+module.exports = function (app) {
 
     // GET route for /api/friends returns friendData.
-    app.get('/api/friends', function(req, res) {
+    app.get('/api/friends', function (req, res) {
         res.json(friendData);
     });
 
@@ -17,8 +17,9 @@ module.exports = function(app) {
         for (var i = 0; i < friendData.length; i++) {
             var totalDifference = 0;
             for (var j = 0; j < friendData[i].scores.length; j++) {
+                console.log(thisUser[j]);
                 //compare the code of two arrays in position j
-                totalDifference += Math.abs(friendData[i].scores[j] - thisUser.scores[j])
+totalDifference += Math.abs(friendData[i].scores[j] - thisUser.scores[j])
                 // find the difference in their value
             }
             if (closestMatch > totalDifference) {
