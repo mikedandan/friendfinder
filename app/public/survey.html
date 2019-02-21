@@ -11,9 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-S7YMK1xjUjSpEnF4P8hPUcgjXYLZKK3fQW1j5ObLSl787II9p8RO9XUGehRmKsxd" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-S7YMK1xjUjSpEnF4P8hPUcgjXYLZKK3fQW1j5ObLSl787II9p8RO9XUGehRmKsxd" crossorigin="anonymous">
 
     <script src="javascript/survey.js"></script>
 </head>
@@ -231,98 +235,9 @@
                 </div>
             </div>
 
-        </div>
+        </sdiv>
     </div>
     </div>
-
-    <script type="text/javascript">
-        // Chosen CSS
-        // var config = {
-        //   ".chosen-select": {},
-        //   ".chosen-select-deselect": {
-        //     allow_single_deselect: true
-        //   },
-        //   ".chosen-select-no-single": {
-        //     disable_search_threshold: 10
-        //   },
-        //   ".chosen-select-no-results": {
-        //     no_results_text: "Oops, nothing found!"
-        //   },
-        //   ".chosen-select-width": {
-        //     width: "95%"
-        //   }
-        // };
-
-        // for (var selector in config) {
-        //   $(selector).chosen(config[selector]);
-        // }
-
-        // Capture the form inputs
-        // $("#submit").on("click", function (event) {
-        //     event.preventDefault();
-
-        //     // Form validation
-        //     function validateForm() {
-        //         var isValid = true;
-        //         $(".form-control").each(function () {
-        //             if ($(this).val() === "") {
-        //                 isValid = false;
-        //             }
-        //         });
-
-        //         $(".input-field").each(function () {
-
-        //             if ($(this).val() === "") {
-        //                 isValid = false;
-        //             }
-        //         });
-        //         return isValid;
-        //     }
-
-        //     // If all required fields are filled
-        //     if (validateForm()) {
-        //         // Create an object for the user"s data
-        //         var userData = {
-        //             name: $("#name").val(),
-        //             photo: $("#photo").val(),
-        //             scores: [
-        //                 $("#q1").val(),
-        //                 $("#q2").val(),
-        //                 $("#q3").val(),
-        //                 $("#q4").val(),
-        //                 $("#q5").val(),
-        //                 $("#q6").val(),
-        //                 $("#q7").val(),
-        //                 $("#q8").val(),
-        //                 $("#q9").val(),
-        //                 $("#q10").val()
-        //             ]
-        //         };
-
-        //         // AJAX post the data to the friends API.
-        //         $.post("/api/friends", userData, function (data) {
-
-        //             // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-        //             $("#match-name").text(data.name);
-        //             $("#match-img").attr("src", data.photo);
-
-        //             // Show the modal with the best match
-        //             $("#results-modal").modal("toggle");
-
-        //         });
-        //     } else {
-        //         alert("Please fill out all fields before submitting!");
-        //     }
-        // });
-
-        // $(document).ready(function () {
-        //     $('.modal').modal();
-        // });
-
-        // $(document).ready(function () {
-        //     $('select').formSelect();
-        // });
-    </script>
 
 </body>
 <footer class="page-footer orange">
