@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //set the public folder path
-app.use(express.static("app/public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 //routes
 require("./app/routing/apiRoutes.js")(app);
