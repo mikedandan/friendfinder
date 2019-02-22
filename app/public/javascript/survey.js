@@ -91,7 +91,7 @@ $(document).ready(function () {
                     $('#modalContent').empty();
                     $('#userName').val('');
                     $('#imageUrl').val('');
-
+console.log(data);
                     // The results are in array form. For each object, grab the name and URL.
                     data.forEach(function (profile) {
                         var profileDiv = $('<div class="profile">');

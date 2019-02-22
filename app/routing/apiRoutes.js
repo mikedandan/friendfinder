@@ -29,6 +29,7 @@ module.exports = function (app) {
         }
         console.log(thisUser);
         friendData.push(thisUser);
+        console.log(bestMatch);
         res.json(bestMatch);
     });
     // POST route for /api/friends takes in the new data and responds with the most compatible match.
