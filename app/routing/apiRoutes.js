@@ -45,9 +45,9 @@ module.exports = function (app) {
                 var totalDifference = 0;
 
                 // For each answer, compare the answers and add the absolute value of the difference to the total difference.
-                for (var i = 0; i < thisUser.answers.length; i++) {
-                    var otherAnswer = user.answers[i];
-                    var thisAnswer = thisUser.answers[i];
+                for (var i = 0; i < thisUser.scores.length; i++) {
+                    var otherAnswer = user.scores[i];
+                    var thisAnswer = thisUser.scores[i];
                     var difference = +otherAnswer - +thisAnswer;
                     totalDifference += Math.abs(difference);
                 }
