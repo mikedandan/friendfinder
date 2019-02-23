@@ -1,7 +1,7 @@
 module.exports = [
     {
         "name": "Deadpool",
-        "photo": "https://images-na.ssl-images-amazon.com/images/I/71prblSklaL._SX425_.jpg",
+        "photo": "https://pixel.nymag.com/imgs/daily/vulture/2018/05/17/17-deadpool-x-men.w700.h700.jpg",
         "scores": [
             5,
             1,
